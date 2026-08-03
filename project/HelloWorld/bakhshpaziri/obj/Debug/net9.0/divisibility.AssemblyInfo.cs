@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("divisibility")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca8ea3b6081aa360c311ae7e2b084961d6462a09")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+232ff8d6f519f5bb3aed95b49f157efeee75fc15")]
 [assembly: System.Reflection.AssemblyProductAttribute("divisibility")]
 [assembly: System.Reflection.AssemblyTitleAttribute("divisibility")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

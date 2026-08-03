@@ -9,19 +9,24 @@ namespace divisibility
         {
             Console.WriteLine("welcome; please enter the bigger number");
             string firstStr = Console.ReadLine() ?? "";
-            bool b1 = int.TryParse(firstStr , out int first);
-            if (b1 == false)
+            bool isFirstValid = int.TryParse(firstStr , out int first);
+            if (isFirstValid == false)
             {
                 Console.WriteLine("I said enter a number goofy");
                 Environment.Exit(0);
             }
             Console.WriteLine("ok! please enter the smaller one");
             string secondStr = Console.ReadLine() ?? "";
-            bool b2 = int.TryParse(secondStr, out int second);
-            if (b2 == false)
+            bool isSecondValid = int.TryParse(secondStr, out int second);
+            if (isSecondValid == false)
             {
                 Console.WriteLine("I said enter a number goofy");
                 Environment.Exit(0);
+            }
+            if (second == 0)
+            {
+                Console.WriteLine("You can't divide by zero.");
+                return;// another way to exit console
             }
             if (first < second)
             {
