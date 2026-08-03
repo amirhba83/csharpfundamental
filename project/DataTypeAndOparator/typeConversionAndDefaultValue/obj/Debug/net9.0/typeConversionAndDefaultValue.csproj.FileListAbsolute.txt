@@ -1,0 +1,14 @@
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\bin\Debug\net9.0\typeConversionAndDefaultValue.exe
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\bin\Debug\net9.0\typeConversionAndDefaultValue.deps.json
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\bin\Debug\net9.0\typeConversionAndDefaultValue.runtimeconfig.json
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\bin\Debug\net9.0\typeConversionAndDefaultValue.dll
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\bin\Debug\net9.0\typeConversionAndDefaultValue.pdb
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\obj\Debug\net9.0\typeConversionAndDefaultValue.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\obj\Debug\net9.0\typeConversionAndDefaultValue.AssemblyInfoInputs.cache
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\obj\Debug\net9.0\typeConversionAndDefaultValue.AssemblyInfo.cs
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\obj\Debug\net9.0\typeConversionAndDefaultValue.csproj.CoreCompileInputs.cache
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\obj\Debug\net9.0\typeConversionAndDefaultValue.dll
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\obj\Debug\net9.0\refint\typeConversionAndDefaultValue.dll
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\obj\Debug\net9.0\typeConversionAndDefaultValue.pdb
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\obj\Debug\net9.0\typeConversionAndDefaultValue.genruntimeconfig.cache
+C:\Users\laboo\source\repos\DataTypeAndOparator\typeConversionAnddefaultValue\obj\Debug\net9.0\ref\typeConversionAndDefaultValue.dll

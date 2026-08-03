@@ -1,0 +1,14 @@
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\bin\Debug\net9.0\DataTypes.exe
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\bin\Debug\net9.0\DataTypes.deps.json
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\bin\Debug\net9.0\DataTypes.runtimeconfig.json
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\bin\Debug\net9.0\DataTypes.dll
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\bin\Debug\net9.0\DataTypes.pdb
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\obj\Debug\net9.0\DataTypes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\obj\Debug\net9.0\DataTypes.AssemblyInfoInputs.cache
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\obj\Debug\net9.0\DataTypes.AssemblyInfo.cs
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\obj\Debug\net9.0\DataTypes.csproj.CoreCompileInputs.cache
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\obj\Debug\net9.0\DataTypes.dll
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\obj\Debug\net9.0\refint\DataTypes.dll
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\obj\Debug\net9.0\DataTypes.pdb
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\obj\Debug\net9.0\DataTypes.genruntimeconfig.cache
+C:\Users\laboo\source\repos\DataTypeAndOparator\DataTypes\obj\Debug\net9.0\ref\DataTypes.dll
