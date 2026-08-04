@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\laboo\\Desktop\\c#\\project\\HelloWorld\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1997F56C-6CA8-4894-A95B-D0105EAE4B1E}|bakhshpaziri\\divisibility.csproj|c:\\users\\laboo\\desktop\\c#\\project\\helloworld\\bakhshpaziri\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1997F56C-6CA8-4894-A95B-D0105EAE4B1E}|bakhshpaziri\\divisibility.csproj|solutionrelative:bakhshpaziri\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CB49C9A3-6F0D-431D-9274-B3D6E1BEAD55}|SignUp\\SignUp.csproj|c:\\users\\laboo\\desktop\\c#\\project\\helloworld\\signup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB49C9A3-6F0D-431D-9274-B3D6E1BEAD55}|SignUp\\SignUp.csproj|solutionrelative:signup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1997F56C-6CA8-4894-A95B-D0105EAE4B1E}|bakhshpaziri\\divisibility.csproj|c:\\users\\laboo\\desktop\\c#\\project\\helloworld\\bakhshpaziri\\divisibility.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{1997F56C-6CA8-4894-A95B-D0105EAE4B1E}|bakhshpaziri\\divisibility.csproj|solutionrelative:bakhshpaziri\\divisibility.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{7D45FA14-8D16-434E-90A9-8192584F326F}|HelloWorld\\HelloWorld.csproj|c:\\users\\laboo\\desktop\\c#\\project\\helloworld\\helloworld\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D45FA14-8D16-434E-90A9-8192584F326F}|HelloWorld\\HelloWorld.csproj|solutionrelative:helloworld\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6E64FD8-5F7A-4D71-BB51-DD601D21FD92}|OddOrEven\\OddOrEven.csproj|c:\\users\\laboo\\desktop\\c#\\project\\helloworld\\oddoreven\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6E64FD8-5F7A-4D71-BB51-DD601D21FD92}|OddOrEven\\OddOrEven.csproj|solutionrelative:oddoreven\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,28 +26,41 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "divisibility",
-              "DocumentMoniker": "C:\\Users\\laboo\\Desktop\\c#\\project\\HelloWorld\\bakhshpaziri\\divisibility.csproj",
-              "RelativeDocumentMoniker": "bakhshpaziri\\divisibility.csproj",
-              "ToolTip": "C:\\Users\\laboo\\Desktop\\c#\\project\\HelloWorld\\bakhshpaziri\\divisibility.csproj",
-              "RelativeToolTip": "bakhshpaziri\\divisibility.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-08-03T14:00:59.73Z",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\laboo\\Desktop\\c#\\project\\HelloWorld\\OddOrEven\\Program.cs",
+              "RelativeDocumentMoniker": "OddOrEven\\Program.cs",
+              "ToolTip": "C:\\Users\\laboo\\Desktop\\c#\\project\\HelloWorld\\OddOrEven\\Program.cs",
+              "RelativeToolTip": "OddOrEven\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T15:16:16.13Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\laboo\\Desktop\\c#\\project\\HelloWorld\\bakhshpaziri\\Program.cs",
-              "RelativeDocumentMoniker": "bakhshpaziri\\Program.cs",
-              "ToolTip": "C:\\Users\\laboo\\Desktop\\c#\\project\\HelloWorld\\bakhshpaziri\\Program.cs",
-              "RelativeToolTip": "bakhshpaziri\\Program.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAYwBQAAAAdAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\laboo\\Desktop\\c#\\project\\HelloWorld\\SignUp\\Program.cs",
+              "RelativeDocumentMoniker": "SignUp\\Program.cs",
+              "ToolTip": "C:\\Users\\laboo\\Desktop\\c#\\project\\HelloWorld\\SignUp\\Program.cs",
+              "RelativeToolTip": "SignUp\\Program.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAgwFQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T13:31:36.448Z",
+              "WhenOpened": "2026-08-03T15:11:22.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\laboo\\Desktop\\c#\\project\\HelloWorld\\HelloWorld\\Program.cs",
+              "RelativeDocumentMoniker": "HelloWorld\\Program.cs",
+              "ToolTip": "C:\\Users\\laboo\\Desktop\\c#\\project\\HelloWorld\\HelloWorld\\Program.cs",
+              "RelativeToolTip": "HelloWorld\\Program.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T15:11:11.731Z",
               "EditorCaption": ""
             }
           ]

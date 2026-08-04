@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace divisibility
+﻿namespace Divisibility
 
 {
     internal class Program

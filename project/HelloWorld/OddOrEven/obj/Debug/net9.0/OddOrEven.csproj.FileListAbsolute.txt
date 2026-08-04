@@ -1,0 +1,15 @@
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\bin\Debug\net9.0\OddOrEven.exe
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\bin\Debug\net9.0\OddOrEven.deps.json
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\bin\Debug\net9.0\OddOrEven.runtimeconfig.json
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\bin\Debug\net9.0\OddOrEven.dll
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\bin\Debug\net9.0\OddOrEven.pdb
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\obj\Debug\net9.0\OddOrEven.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\obj\Debug\net9.0\OddOrEven.AssemblyInfoInputs.cache
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\obj\Debug\net9.0\OddOrEven.AssemblyInfo.cs
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\obj\Debug\net9.0\OddOrEven.csproj.CoreCompileInputs.cache
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\obj\Debug\net9.0\OddOrEven.sourcelink.json
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\obj\Debug\net9.0\OddOrEven.dll
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\obj\Debug\net9.0\refint\OddOrEven.dll
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\obj\Debug\net9.0\OddOrEven.pdb
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\obj\Debug\net9.0\OddOrEven.genruntimeconfig.cache
+C:\Users\laboo\Desktop\c#\project\HelloWorld\OddOrEven\obj\Debug\net9.0\ref\OddOrEven.dll
