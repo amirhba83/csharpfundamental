@@ -17,15 +17,9 @@
                 Console.WriteLine("being odd or even is just for natural numbers");
                 return ;
             }
-            else if(num % 2 ==0)
-            {
-                Console.WriteLine($"{num} is even");
-                
-            }
-            else 
-            {
-                Console.WriteLine($"{num} is odd");
-            }
-        } 
+            string parity = num % 2 == 0  ? "even" : "odd" ;
+            Console.WriteLine($"{num} is {parity}");
+            //Console.WriteLine($"{num} is {(num % 2 == 0 ? "even" : "odd")}.");
+        }
     }
 }
