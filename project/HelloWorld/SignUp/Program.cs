@@ -10,11 +10,11 @@
             Console.ForegroundColor = ConsoleColor.Gray;//Set Text color
             Console.Clear();// fix 
             Console.Title = "Hello World portal!";//Title
-            Console.SetCursorPosition(3, 3);//ser cursou posistion 
+            Console.SetCursorPosition(3, 3);//ser cursor position 
             // Configure console appearance
             // get first name
             Console.WriteLine("welcome! please enter your first name");
-            string firstName = Console.ReadLine() ?? "";
+            string firstName = Console.ReadLine() ?? String.Empty;
             firstName = firstName.Trim().ToLower();
             if (string.IsNullOrWhiteSpace(firstName))
             {
@@ -23,8 +23,8 @@
             }
             // get last name    
             Console.WriteLine("now enter your last name");
-            string? lastName = Console.ReadLine() ?? "";
-            lastName = lastName.Trim();
+            string? lastName = Console.ReadLine() ?? String.Empty;
+            lastName = lastName.Trim();// because of IsNullOrWhiteSpace it's not necessary 
             lastName = lastName.ToLower();
             if (string.IsNullOrWhiteSpace(lastName))
             {
@@ -49,17 +49,17 @@
             // get gender
             //string gender;
             Console.WriteLine("enter gender--> m: Male , f: Female , e:Email :/");
-            string? gender = Console.ReadLine() ?? "";
+            string? gender = Console.ReadLine() ?? String.Empty;
             gender = gender.Trim();
             gender = gender.ToLower();
-            switch(gender)
+            switch (gender)
             {
                 case "m" or "male":
                     {
                         gender = "Male";
                         break;
                     }
-                case "f" or "female" :
+                case "f" or "female":
                     {
                         gender = "Female";
                         break;
@@ -84,9 +84,13 @@
             Console.WriteLine(
                 $"Registration Summary:\n" +
                 $"first name: {firstName}\n" +
-                $"last name: {lastName}\n"+
-                $"age: {age}\n"+
+                $"last name: {lastName}\n" +
+                $"age: {age}\n" +
                 $"gender: {gender}");
+            
+          
+            
+               
         }
     }
 }
