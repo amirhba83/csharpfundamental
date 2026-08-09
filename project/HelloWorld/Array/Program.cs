@@ -1,4 +1,6 @@
-﻿namespace Array
+﻿using System.Diagnostics.Metrics;
+
+namespace Array
 {
     internal class Program
     {
@@ -51,6 +53,40 @@
             {
                 Console.Write($"{score},");
             }
+
+            //-----------------------------------------------------------------------
+            // second practice 
+            int[] scores_2 = { 12, 5, 8, 20, 15, 20, 3, 17 };
+            // find the biggest number
+            int biggest_2 = scores_2[0];
+            foreach (int score in scores_2)
+            {
+                if (score > biggest_2)
+                    biggest_2 = score;
+            }
+            Console.WriteLine($"\nmax is {biggest_2}");
+            // find the biggest second  number
+            //System.Array.Sort( scores_2 );
+            //System.Array.Reverse(scores_2);
+            int secondBiggest = scores_2[0];
+            foreach (int score in scores_2)
+            {
+                if (score > secondBiggest && score != biggest_2)
+                {
+                    secondBiggest = score;  
+                }
+            }
+            Console.WriteLine($"the second biggest number is {secondBiggest}");
+            //
+            int biggestCount = 0;   
+            foreach (int score in scores_2)
+            {
+                if (score == biggest_2)
+                    biggestCount ++;
+            }
+            Console.WriteLine($"count of {biggest_2} (the biggest number) is {biggestCount}");
+            //
+
 
         }
     }
