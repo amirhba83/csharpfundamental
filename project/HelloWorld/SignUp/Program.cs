@@ -1,7 +1,7 @@
 ﻿namespace SignUp
 
 {
-    internal class Program
+    internal class Program 
     {
         static void Main(string[] args)
         {
@@ -23,7 +23,7 @@
             }
             // get last name    
             Console.WriteLine("now enter your last name");
-            string? lastName = Console.ReadLine() ?? String.Empty;
+            string lastName = Console.ReadLine() ?? String.Empty;
             lastName = lastName.Trim();// because of IsNullOrWhiteSpace it's not necessary 
             lastName = lastName.ToLower();
             if (string.IsNullOrWhiteSpace(lastName))
@@ -80,17 +80,58 @@
                         return;
                     }
             }
+            Console.WriteLine("please enter your phone number");
+            string phone;
+            string enteredPhone = Console.ReadLine() ?? String.Empty;
+            enteredPhone = enteredPhone.Trim();
+            bool isPhoneValid = default;
+            bool isNumericValid = default;
+            isNumericValid = long.TryParse(enteredPhone.Substring(1), out long p);
+            if (enteredPhone.Length == 13 && enteredPhone.StartsWith("+98"))
+            {
+                phone = enteredPhone;
+                isPhoneValid = true;
+            }
+            else if(enteredPhone.Length == 14 && enteredPhone.StartsWith("0098"))
+            {
+                phone = (enteredPhone.Remove(0,2)).Insert(0,"+");
+                isPhoneValid = true;
+            }
+            else if (enteredPhone.Length == 12 && enteredPhone.StartsWith("98"))
+            {
+                phone = enteredPhone.Insert(0, "+");
+                isPhoneValid = true;
+            }
+            else if(enteredPhone.Length == 11 && enteredPhone.StartsWith("09"))
+            {
+                phone = (enteredPhone.Remove(0, 2)).Insert(0, "+98");
+                isPhoneValid = true;
+            }
+            else if (enteredPhone.Length == 10 && enteredPhone.StartsWith("9"))
+            {
+                phone = (enteredPhone.Remove(0, 1)).Insert(0, "+98");
+                isPhoneValid = true;
+            }
+            else if (!isNumericValid)
+            {
+                Console.WriteLine("please enter a valid phone");
+                return;
+            }
+            else 
+            {
+                Console.WriteLine("please enter a valid phone");
+                return;
+            }
+
             // print profile
+            if (isPhoneValid && isAgeValid)
             Console.WriteLine(
                 $"Registration Summary:\n" +
                 $"first name: {firstName}\n" +
                 $"last name: {lastName}\n" +
                 $"age: {age}\n" +
-                $"gender: {gender}");
-            
-          
-            
-               
+                $"gender: {gender}\n" +
+                $"phone number: {phone}\n");
         }
     }
 }
