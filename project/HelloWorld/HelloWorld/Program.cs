@@ -2,7 +2,7 @@
 
 namespace HelloWord
 {
-    internal class Program
+     internal class Program
     {
         static void Main(string[] args)
         {
@@ -25,19 +25,9 @@ namespace HelloWord
             //else
             //{
             //    Console.WriteLine("registered successfully");
-            //}//-
+            //}//
             
-            Console.InputEncoding = Encoding.UTF8;
-            Console.OutputEncoding = Encoding.UTF8;
-
-            Console.WriteLine("سلام");
-            Console.Write("نام را وارد کنید: ");
-
-            string? text = Console.ReadLine();
-
-            Console.WriteLine(text);
-
-
         }
+
     }
 }
