@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome please enter your number (max:  4,294,967,295)");
             string numStr = Console.ReadLine() ?? "error";
-            bool isValid = uint.TryParse(numStr, out uint num);
+            bool isValid = int.TryParse(numStr, out int num);
             if (!isValid)
             {
                 Console.WriteLine("please enter a valid number");
@@ -15,9 +15,9 @@
             else if (num < 1)
             {
                 Console.WriteLine("being odd or even is just for natural numbers");
-                return ;
+                return;
             }
-            string parity = num % 2 == 0  ? "even" : "odd" ;
+            string parity = num % 2 == 0 ? "even" : "odd";
             Console.WriteLine($"{num} is {parity}");
             //Console.WriteLine($"{num} is {(num % 2 == 0 ? "even" : "odd")}.");
         }
