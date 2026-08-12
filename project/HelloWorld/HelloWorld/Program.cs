@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using HelloWorld;
+using System.Text;
+using static HelloWorld.Book;
 
 namespace HelloWord
 {
@@ -6,27 +8,17 @@ namespace HelloWord
     {
         static void Main(string[] args)
         {
-            //Console.SetBufferSize(500, 500);//Size of console
-            //Console.BackgroundColor = ConsoleColor.DarkCyan;//Set Background color
-            //Console.ForegroundColor = ConsoleColor.Gray;//Set Text color
-            //Console.Title = "Hello World portal!";//Title
-            //Console.SetCursorPosition(3, 3);//Start of cursor
-            //Console.WriteLine("welcome! pleas enter your first name");
-            //string? firstName = Console.ReadLine() ?? "noName";
-            //Console.WriteLine("now enter your last name");
-            //string? lastName = Console.ReadLine() ?? "noLastName";
-            //Console.WriteLine("how old are you??");
-            //string agestr = Console.ReadLine() ?? "0";
-            //short age = short.Parse(agestr);
-            //if (age < 18)
-            //{
-            //    Console.WriteLine("you cant register in this app");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("registered successfully");
-            //}//
-            
+            //Student student1 = new Student("Ali", 20, 18);  
+            //Student student2 = new Student("Akbar", 12, 8);
+            //Student student3 = new Student("Asghar", 3, 9);
+            //student1.ShowInfo();
+            //student2.ShowInfo();
+            //student3.ShowInfo();
+            Rectangle rectangle = new Rectangle(5, 10);
+            rectangle.ShowInfo();
+            rectangle.Scale(2);
+            rectangle.ShowInfo();
+
         }
 
     }

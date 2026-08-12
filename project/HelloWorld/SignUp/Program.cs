@@ -21,6 +21,7 @@
             string phone = GetPhone();
             // print profile
             PrintProfile(firstName: firstName, lastName: lastName, age: age, gender: gender, phone: phone);
+            Console.ReadKey();
         }
 
         // _______________________________________________________________________________________
@@ -45,7 +46,7 @@
         }
         //------------
         static void ShowInputMessage(string property)
-        => Console.WriteLine($"pleas enter your {property}:");
+        => Console.WriteLine($"please enter your {property}:");
         //-------------
         static void ShowNecessaryMessage(string property)
         => Console.WriteLine($"{property} is necessary, please try again. ");
@@ -100,7 +101,7 @@
         //___________________
         static bool IsValidAge(int age)
         {
-            if (1 < age && age < 120)
+            if (1 <= age && age <= 120)
                 return true;
             else
                 return false;
@@ -193,7 +194,7 @@
             {
                 gender = GetStringWithEmpty(nameof(gender));
                 if (!IsValidGender(gender))
-                    Console.WriteLine("please enter a valid  option");
+                    Console.WriteLine("please enter a valid  option (m for male - f for female - e for email)");
             }
             gender = CleanGender(gender);
             return gender;
@@ -202,7 +203,7 @@
         //--------------------
         static bool IsValidGender(string gender)
         {
-            if (gender == "male" || gender == "m" || gender == "f" || gender == "female"|| gender == string.Empty)
+            if (gender == "male" || gender == "m" || gender == "f" || gender == "female" || gender == string.Empty)
             {
                 return true;
             }
@@ -211,7 +212,7 @@
                 Console.WriteLine("Nice try! We don't register emails 😄");
                 return false;
             }
-             else
+            else
                 return false;
         }
         //--------------------------------------
@@ -243,6 +244,6 @@
             }
             return gender;
         }
- }
+    }
 
 }
