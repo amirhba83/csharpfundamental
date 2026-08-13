@@ -8,12 +8,26 @@ namespace HelloWorld
 {
     public class Car
     {
+        public string Brand;
         public string Model;
         public int Year;
         //--
-        public void Honk()
+        public Car(string Brand, string Model, int Year)
         {
-            Console.WriteLine($"{Model}says بوووووووق");
+            this.Brand = Brand;
+            this.Model = Model;
+            this.Year = Year;
+        }
+        public Car()
+        {
+            Brand = "UNKNOWN";
+            Model = "UNKNOWN";
+            Year = 0;
+        }
+
+        public void Start()
+        {
+            Console.WriteLine($"{Model} is starting");
         }
 
     }
@@ -44,29 +58,47 @@ namespace HelloWorld
     }
     public class Student
     {
-        public string Name;
-        public byte Score1;
-        public byte Score2;
-        public Student(string name, byte score1, byte score2)
+        // fields
+        private string _name;
+        private byte _age;
+
+        //properties
+
+        public string Name
         {
-            Name = name;
-            Score1 = score1;
-            Score2 = score2;
+            get { return _name; }
+            set { _name = value; }
         }
-        public double Average()
+        public byte Age
         {
-            return (Score1 + Score2) / 2.0;
+            get { return _age; }
+            private set
+            {
+                if (value >= 1 && value <= 120)
+                    _age = value;
+            }
         }
-        public bool IsPassed()
+
+        public Student(string name, byte age)
         {
-            return Average() >= 10;
+            this.Name = name;
+            this.Age = age;
+
         }
-        public void ShowInfo()
-        {
-            Console.WriteLine($"{nameof(Name)}: {Name}," +
-                $"  {nameof(Average)}: {Average()}," +
-                $" {nameof(IsPassed)}?: {(IsPassed() ? "passed" : "failed")}");
-        }
+        //public double Average()
+        //{
+        //    return (Score1 + Score2) / 2.0;
+        //}
+        //public bool IsPassed()
+        //{
+        //    return Average() >= 10;
+        //}
+        //public void ShowInfo()
+        //{
+        //    Console.WriteLine($"{nameof(Name)}: {Name}," +
+        //        $"  {nameof(Average)}: {Average()}," +
+        //        $" {nameof(IsPassed)}?: {(IsPassed() ? "passed" : "failed")}");
+        //}
     }
     //--------
 
@@ -110,5 +142,109 @@ namespace HelloWorld
                 $"{nameof(GetPerimeter)}: {GetPerimeter()},\n" +
                 $" {nameof(IsSquare)}?: {(IsSquare() ? "Yes" : "No")}");
         }
+
+    }
+    //
+    public class Account
+    {
+        public Account(string name, decimal amount)
+        {
+            this.OwnerName = name;
+            this.Balance = amount;
+        }
+        private string _ownerName;
+        private decimal _balance;
+
+        public string OwnerName
+        {
+            get { return _ownerName; }
+            set { _ownerName = value; }
+        }
+        public decimal Balance
+        {
+            get { return _balance; }
+            private set
+            {
+                if (value >= 0)
+                    _balance = value;
+            }
+
+        }
+        public void Deposit(decimal amount)
+        {
+            if (amount > 0)
+                this.Balance += amount;
+        }
+
+        public void Withdraw(decimal amount)
+        {
+            if (amount > 0 && amount <= Balance)
+                Balance -= amount;
+
+        }
+    }
+    public class Product
+    {
+        private string _name;
+        private decimal _price;
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+
+        public decimal Price
+        {
+            get { return _price; }
+            private set
+            {
+                if (value >= 0)
+                    _price = value;
+            }
+        }
+
+
+        public Product(string name, decimal price)
+        {
+            this.Name = name;
+            this.Price = price;
+        }
+
+        public void ChangePrice(decimal newPrice)
+        {
+            this.Price = newPrice;
+        }
+    }
+    public class Employee
+    {
+        private string _name;
+        private decimal _salary;
+        //-- 
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+        public decimal Salary
+        {
+            get { return _salary; }
+            private set
+            {
+                if (value >= 0)
+                    _salary = value;
+            }
+        }
+        public Employee(string name, decimal salary)
+        {
+            this.Name = name;
+            this.Salary = salary;
+        }
+        public void IncreaseSalary(decimal amount)
+        {
+            if (amount > 0)
+                Salary += amount;
+        }
     }
 }
+

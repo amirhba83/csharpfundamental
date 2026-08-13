@@ -14,10 +14,16 @@ namespace HelloWord
             //student1.ShowInfo();
             //student2.ShowInfo();
             //student3.ShowInfo();
-            Rectangle rectangle = new Rectangle(5, 10);
-            rectangle.ShowInfo();
-            rectangle.Scale(2);
-            rectangle.ShowInfo();
+            //Rectangle rectangle = new Rectangle(5, 10);
+            //rectangle.ShowInfo();
+            //rectangle.Scale(2);
+            //rectangle.ShowInfo();
+            Car samand = new Car(brand: "irankhodro", model: "samand", year: 1405);
+            samand.Start();
+            Car car1 = new Car();
+            car1.Start();
+
+
 
         }
 
