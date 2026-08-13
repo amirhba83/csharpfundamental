@@ -1,4 +1,6 @@
-﻿namespace Methodes
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Methodes
 {
     internal class Program
     {
@@ -193,8 +195,9 @@
                 count++;
             }
             average = sum / (double)count;
-
+            
         }
+        
     }
     
 }

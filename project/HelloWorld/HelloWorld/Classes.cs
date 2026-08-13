@@ -8,11 +8,20 @@ namespace HelloWorld
 {
     public class Car
     {
-        public string Brand;
-        public string Model;
-        public int Year;
+        private int _year;
+        public string Brand { get; init; }
+        public string Model { get; init; }
+        public int Year
+        {
+            get { return _year; }
+            set
+            {
+                if (value <= 2026 && value >= 1900)
+                    _year = value;
+            }
+        }
         //--
-        public Car(string Brand, string Model, int Year)
+        public Car(string brand, string model, int year)
         {
             this.Brand = Brand;
             this.Model = Model;
@@ -151,9 +160,11 @@ namespace HelloWorld
         {
             this.OwnerName = name;
             this.Balance = amount;
+            _totalAccount++;
         }
         private string _ownerName;
         private decimal _balance;
+        static int _totalAccount;
 
         public string OwnerName
         {
@@ -180,7 +191,17 @@ namespace HelloWorld
         {
             if (amount > 0 && amount <= Balance)
                 Balance -= amount;
+            else
+                Console.WriteLine(" موجودی کافی نیست");
 
+        }
+        public void ShowBalance()
+        {
+            Console.WriteLine($"owner {OwnerName} your balance is {Balance}");
+        }
+        public static void ShowTotalAccounts()
+        {
+            Console.WriteLine($"Total accounts: {_totalAccount}");
         }
     }
     public class Product
@@ -244,6 +265,41 @@ namespace HelloWorld
         {
             if (amount > 0)
                 Salary += amount;
+        }
+    }
+    public class Boook
+    {
+        public string Title { get; set; }
+
+        public string Author { get; set; }
+
+        private decimal _price;
+
+        public decimal Price
+        {
+            get { return _price; }
+            private set
+            {
+                if (value >= 0)
+                    _price = value;
+            }
+
+        }
+
+        public Boook(string title, string author, decimal price)
+        {
+            Price = price;
+            Title = title;
+            Author = author;
+        }
+
+        public void Discount(decimal amount)
+        {
+            // اگر amount مثبت بود،
+            // قیمت را به اندازه amount کاهش بده
+            // ولی قیمت نباید منفی شود.
+            if (amount > 0 && amount <= Price)
+                Price -= amount;
         }
     }
 }

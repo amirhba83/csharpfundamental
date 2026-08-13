@@ -1,8 +1,5 @@
-﻿using HelloWorld;
-using System.Text;
-using static HelloWorld.Book;
-
-namespace HelloWord
+﻿
+namespace HelloWorld
 {
      internal class Program
     {
@@ -18,10 +15,17 @@ namespace HelloWord
             //rectangle.ShowInfo();
             //rectangle.Scale(2);
             //rectangle.ShowInfo();
-            Car samand = new Car(brand: "irankhodro", model: "samand", year: 1405);
-            samand.Start();
-            Car car1 = new Car();
-            car1.Start();
+            Account a1 = new Account("Ali", 1000);
+            Account a2 = new Account("mahmood", 200);
+            Account a3 = new Account("Akbar", 500000);
+            a1.ShowBalance();
+            a2.ShowBalance();
+            a3.ShowBalance();
+            a1.Deposit(555);
+            a2.Withdraw(300);
+            a1.ShowBalance();
+            a2.ShowBalance();
+            Account.ShowTotalAccounts();
 
 
 
