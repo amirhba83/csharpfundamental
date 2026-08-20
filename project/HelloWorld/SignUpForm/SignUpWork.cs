@@ -157,21 +157,8 @@ namespace SignUpForm
 
         }
         //-------------------
-        public static string GetGender()
-        {
-
-            string? gender = default;
-            gender = GetStringWithEmpty(nameof(gender));
-            while (!IsValidGender(gender))
-            {
-                gender = GetStringWithEmpty(nameof(gender));
-                if (!IsValidGender(gender))
-                    MessageBox.Show("please enter a valid  option (m for male - f for female - e for email)");
-            }
-            gender = CleanGender(gender);
-            return gender;
-
-        }
+        
+        
         //--------------------
         public static bool IsValidGender(string gender)
         {

@@ -20,12 +20,26 @@ namespace SignUpForm
         {
 
         }
-
+        private void GenderRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = (RadioButton)sender;
+            if (rb.Checked)
+            {
+                signUpbotton.Focus();
+            }
+        }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-
+        private void MoveToNextControl(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                this.SelectNextControl((Control)sender, true, true, true, true);
+            }
+        }
         private void signUpbotton_Click(object sender, EventArgs e)
         {
             bool isValidData = default;
@@ -35,15 +49,17 @@ namespace SignUpForm
             {
                 isValidData = true;
                 firstName = SignUpWork.CleanDataFromTextBox(nameTextBox.Text);
-            }else
-                isValidData = false; 
+            }
+            else
+                isValidData = false;
             //--
             string lastName = default;
             if (SignUpWork.CheckString(nameof(lastName), lastNameTextBox.Text))
             {
                 isValidData = true && isValidData;
                 lastName = SignUpWork.CleanDataFromTextBox(lastNameTextBox.Text);
-            }else
+            }
+            else
                 isValidData = false;
             //--
             string phoneNumber = default;
@@ -61,7 +77,42 @@ namespace SignUpForm
             else
                 isValidData = false;
             //--
+            string gender = default;
+            if (maleRadio.Checked)
+            {
+                gender = "Male";
+                isValidData = true && isValidData;
+            }
+            else if (femaleRadio.Checked)
+            {
+                gender = "Female";
+                isValidData = true && isValidData;
+            }
+            else if (emailRadio.Checked)
+            {
+                MessageBox.Show(" nice try :)) Email is not a valid gender option");
+                isValidData = false;
+            }
+            else
+            {
+                gender = "prefer not to say";
+                isValidData = true && isValidData;
+            }
+            if (isValidData)
+            {
+                MessageBox.Show($"Sign up successful!\nName: {firstName} {lastName}" +
+                    $"\nPhone: {phoneNumber}" +
+                    $"\nAge: {age}" +
+                    $"\nGender: {gender}");
+            }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            maleRadio.Checked = false;
+            femaleRadio.Checked = false;
+            emailRadio.Checked = false;
         }
     }
 }
