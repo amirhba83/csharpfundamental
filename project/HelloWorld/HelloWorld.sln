@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methodes", "Methodes\Method
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store", "Store\Store.csproj", "{5F973080-B43C-47B0-8838-0BE45FCC8DCD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignUpForm", "SignUpForm\SignUpForm.csproj", "{31BDF205-BA02-4700-935A-D98A4F5B4A5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{5F973080-B43C-47B0-8838-0BE45FCC8DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F973080-B43C-47B0-8838-0BE45FCC8DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F973080-B43C-47B0-8838-0BE45FCC8DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31BDF205-BA02-4700-935A-D98A4F5B4A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31BDF205-BA02-4700-935A-D98A4F5B4A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31BDF205-BA02-4700-935A-D98A4F5B4A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31BDF205-BA02-4700-935A-D98A4F5B4A5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
