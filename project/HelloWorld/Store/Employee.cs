@@ -1,6 +1,6 @@
 ﻿namespace Store;
 #nullable disable
-internal class Employee
+internal abstract class Employee
 {
     // fields
     protected decimal _baseSalary;
@@ -11,7 +11,7 @@ internal class Employee
         get { return _baseSalary; }
         set { _baseSalary = value; }
     }
-    public Employee(string name, decimal baseSalary)
+    public  Employee(string name, decimal baseSalary)
     {
         Name = name;
         BaseSalary = baseSalary;
