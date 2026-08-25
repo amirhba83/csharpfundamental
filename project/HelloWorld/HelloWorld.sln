@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store", "Store\Store.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignUpForm", "SignUpForm\SignUpForm.csproj", "{31BDF205-BA02-4700-935A-D98A4F5B4A5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shape", "Shape\Shape.csproj", "{3D5DB3B6-255B-4CC6-A373-11F6CC878D02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{31BDF205-BA02-4700-935A-D98A4F5B4A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31BDF205-BA02-4700-935A-D98A4F5B4A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31BDF205-BA02-4700-935A-D98A4F5B4A5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D5DB3B6-255B-4CC6-A373-11F6CC878D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D5DB3B6-255B-4CC6-A373-11F6CC878D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D5DB3B6-255B-4CC6-A373-11F6CC878D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D5DB3B6-255B-4CC6-A373-11F6CC878D02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
