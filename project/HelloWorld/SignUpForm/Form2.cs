@@ -10,11 +10,11 @@ namespace SignUpForm;
 
 public partial class Form2 : Form
 {
-    List<Person> people;
+    List<Person> people = new List<Person>();
     public Form2()
     {
         InitializeComponent();
-        people = new List<Person>();
+        //people 
         dataGridView1.DataSource = people;
     }
 
