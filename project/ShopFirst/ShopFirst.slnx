@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ShopFirst/ShopFirst.csproj" />
+  <Project Path="ShopFirstConsole/ShopFirstConsole.csproj" Id="f8babd44-8348-46d8-aa31-23477fc8488b" />
+</Solution>

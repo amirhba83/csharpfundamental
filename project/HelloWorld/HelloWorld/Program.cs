@@ -74,7 +74,7 @@ namespace HelloWorld
             //{
             //    Console.WriteLine(line3);
             //}
-            string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Product.json");
+            string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data","Product.json");
             string jsonContent = File.ReadAllText(jsonFilePath);
             List<Product2> products = JsonConvert.DeserializeObject<List<Product2>>(jsonContent);
 
