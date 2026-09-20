@@ -1,5 +1,5 @@
 ﻿#nullable disable
-namespace ShopFirst; 
+namespace ShopFirstConsole; 
 
 internal class Party
 {
@@ -10,7 +10,7 @@ internal class Party
     public string PhoneNumber { get; private set; }
     public Party(string name, string phoneNumber, string nationalCode)
     {
-        if (IsValidData(name, phoneNumber, nationalCode))
+        if (IsValidPartyInfo(name, phoneNumber, nationalCode))
         {
             PartyId = _nextId++;
             Name = name;
@@ -18,17 +18,34 @@ internal class Party
             NationalCode = nationalCode;
         }
     }
-    private bool IsValidData (string name, string phoneNumber, string nationalCode)
+    private bool IsValidPartyInfo(string name, string phoneNumber, string nationalCode)
     {
         if (string.IsNullOrWhiteSpace(name) ||
             string.IsNullOrWhiteSpace(phoneNumber) ||
-            string.IsNullOrWhiteSpace(nationalCode) 
-
+            string.IsNullOrWhiteSpace(nationalCode)
            )
         {
+            
             return false;
         }
         else
+        {
             return true;
+        }
+            
+    }
+    public void EditPartyInfo(string name,string phoneNumber,string nationalCode)
+    {
+        if (IsValidPartyInfo(name, phoneNumber, nationalCode))
+        {
+            Name = name;
+            PhoneNumber = phoneNumber;
+            NationalCode = nationalCode;
+            Show.OutputMessage("changed succesfully");
+        }
+        else
+        {
+            Show.OutputMessage("the informations are invalid please try again");
+        }
     }
 }

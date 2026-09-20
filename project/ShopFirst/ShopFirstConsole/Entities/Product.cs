@@ -1,6 +1,6 @@
 ﻿#nullable disable
 
-namespace ShopFirst;
+namespace ShopFirstConsole;
 
 internal class Product
 {
@@ -66,13 +66,25 @@ internal class Product
         else
         { return false; }
     }
-    //public void UpdateProductInfo(Product product)
-    //{
-    //    Name = product.Name;
-    //    Brand = product.Brand;
-    //    PurchasePrice = product.PurchasePrice;
-    //    SalePrice = product.SalePrice;
-    //    StockQuantity = product.StockQuantity;
-    //}
+    public void UpdateProductInfo(string name,string brand)
+    {
+        Name = name;
+        Brand = brand;
+    }
+    //--
+    public void UpdatePurchasePrice(decimal purchasePrice)
+    {
+        PurchasePrice = purchasePrice;
+    }
+    //--
+    public void UpdateSalePrice(decimal salePrice)
+    {
+        SalePrice = salePrice;
+    }
+    //---
+    public void IncreaseSalePriceByPercent(int percent)
+    {
+        SalePrice += (SalePrice*percent)/100;
+    }
     #endregion
 }

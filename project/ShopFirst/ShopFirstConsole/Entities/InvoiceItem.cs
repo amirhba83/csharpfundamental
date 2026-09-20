@@ -1,9 +1,9 @@
 ﻿#nullable disable
-namespace ShopFirst;
+namespace ShopFirstConsole;
 
 internal class InvoiceItem
 {
-    public Product Product {  get; private set; }
+    public Product Product { get; private set; }
     public int Quantity { get; private set; }
     public decimal UnitPrice { get; private set; }
     public decimal TotalPrice
@@ -33,5 +33,14 @@ internal class InvoiceItem
     public void ChangeQuantity(int quantity)
     {
         Quantity = quantity;
+    }
+    public void ChangeUnitPrice(decimal  unitPrice)
+    {
+        UnitPrice = unitPrice;
+    }
+    public void EditInvoiceItemInfo(int quantity, decimal unitPrice)
+    {
+        ChangeQuantity(quantity);
+        ChangeUnitPrice(unitPrice);
     }
 }

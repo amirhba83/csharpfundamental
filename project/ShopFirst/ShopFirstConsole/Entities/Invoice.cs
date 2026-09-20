@@ -1,4 +1,4 @@
-﻿namespace ShopFirst;
+﻿namespace ShopFirstConsole;
 
 internal class Invoice
 {
@@ -37,36 +37,65 @@ internal class Invoice
     }
     public void ConfirmSale()
     {
-
-        if (IsConfirmed == false)
+        if(Type == InvoiceType.Sale)
         {
-            bool flag = true;
-            foreach (var item in Items)
+            if (IsConfirmed == false)
             {
-                flag = flag && item.Quantity <= item.Product.StockQuantity;
-                if (item.Quantity > item.Product.StockQuantity)
-                    item.ChangeQuantity(item.Product.StockQuantity);
-            }
-            if (flag)
-            {
+                bool flag = true;
                 foreach (var item in Items)
                 {
-                    item.Product.DecreaseStockQuantity(item.Quantity);
+                    flag = flag && item.Quantity <= item.Product.StockQuantity;
+                    if (item.Quantity > item.Product.StockQuantity)
+                        item.ChangeQuantity(item.Product.StockQuantity);
                 }
-                IsConfirmed = true;
-                Console.WriteLine("registerd suceesfully");
+                if (flag)
+                {
+                    foreach (var item in Items)
+                    {
+                        item.Product.DecreaseStockQuantity(item.Quantity);
+                    }
+                    IsConfirmed = true;
+                    Show.OutputMessage("registerd suceesfully");
+                }
+                else
+                {
+                    Show.OutputMessage("some quantities are replaced \n" +
+                        "plesae recheck and then confirm");
+                }
             }
             else
             {
-                Console.WriteLine("some quantities are replaced \n" +
-                    "plesae recheck and then confirm");
+                Show.OutputMessage("this invoice was already confirmed please use edit menue to change");
+                return;
             }
         }
-        else
+       
+    }
+    //----
+    public void ConfirmPurchase ()
+    {
+        if (Type==InvoiceType.Purchase)
         {
-            Console.WriteLine("this invoice was created please use edit menue to change");
+            if (IsConfirmed == false)
+            {
+                foreach (var item in Items)
+                {
+                    item.Product.IncreaseStockQuantity(item.Quantity);
+                }
+                IsConfirmed = true;
+                Show.OutputMessage("registerd successfully");
+            }
+            else
+            {
+                Show.OutputMessage("this invoice was already confirmed please use edit menue to change");
+                return;
+            }
+        }else
+        {
+            Show.OutputMessage("not registerd pay attention to the invoice type and operation");
             return;
         }
+        
     }
 
 }

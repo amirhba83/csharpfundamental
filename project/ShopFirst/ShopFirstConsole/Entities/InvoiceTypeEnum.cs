@@ -1,4 +1,4 @@
-﻿namespace ShopFirst; 
+﻿namespace ShopFirstConsole; 
 
 public enum InvoiceType
 {
