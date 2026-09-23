@@ -8,9 +8,9 @@ internal class InvoiceItem
     public decimal UnitPrice { get; private set; }
     public decimal TotalPrice
     {
-        get { return  Quantity * UnitPrice; } 
+        get { return Quantity * UnitPrice; }
     }
-    public InvoiceItem(Product product, int quantity , decimal unitPrice)
+    public InvoiceItem(Product product, int quantity, decimal unitPrice)
     {
         if (IsValidData(product, quantity, unitPrice))
         {
@@ -19,7 +19,7 @@ internal class InvoiceItem
             UnitPrice = unitPrice;
         }
     }
-    private bool IsValidData (Product product, int quantity, decimal unitPrice)
+    private bool IsValidData(Product product, int quantity, decimal unitPrice)
     {
         if (product == null ||
             quantity < 1 ||
@@ -34,7 +34,7 @@ internal class InvoiceItem
     {
         Quantity = quantity;
     }
-    public void ChangeUnitPrice(decimal  unitPrice)
+    public void ChangeUnitPrice(decimal unitPrice)
     {
         UnitPrice = unitPrice;
     }

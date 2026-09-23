@@ -1,9 +1,9 @@
 ﻿#nullable disable
-namespace ShopFirstConsole; 
+namespace ShopFirstConsole;
 
 internal class Party
 {
-    private static int _nextId=1;
+    private static int _nextId = 1;
     public int PartyId { get; private set; }
     public string Name { get; private set; }
     public string NationalCode { get; private set; }
@@ -25,16 +25,16 @@ internal class Party
             string.IsNullOrWhiteSpace(nationalCode)
            )
         {
-            
+
             return false;
         }
         else
         {
             return true;
         }
-            
+
     }
-    public void EditPartyInfo(string name,string phoneNumber,string nationalCode)
+    public void EditPartyInfo(string name, string phoneNumber, string nationalCode)
     {
         if (IsValidPartyInfo(name, phoneNumber, nationalCode))
         {

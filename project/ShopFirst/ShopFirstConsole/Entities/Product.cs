@@ -15,10 +15,10 @@ internal class Product
     #endregion
     //--------------------------------------------
     #region constructor
-    public Product (string name, string brand, decimal purchasePrice , decimal salePrice , int stockQuantity )
+    public Product(string name, string brand, decimal purchasePrice, decimal salePrice, int stockQuantity)
     {
 
-        if (IsValidData(name, brand , purchasePrice, salePrice, stockQuantity))
+        if (IsValidData(name, brand, purchasePrice, salePrice, stockQuantity))
         {
             Name = name;
             Brand = brand;
@@ -46,14 +46,15 @@ internal class Product
 
     }
     //--
-    public bool IncreaseStockQuantity(int  quantity)
+    public bool IncreaseStockQuantity(int quantity)
     {
-        if (quantity > 0 )
+        if (quantity > 0)
         {
             StockQuantity = StockQuantity + quantity;
             return true;
-        }else 
-            { return false; }
+        }
+        else
+        { return false; }
     }
     //--
     public bool DecreaseStockQuantity(int quantity)
@@ -66,7 +67,7 @@ internal class Product
         else
         { return false; }
     }
-    public void UpdateProductInfo(string name,string brand)
+    public void UpdateProductInfo(string name, string brand)
     {
         Name = name;
         Brand = brand;
@@ -84,7 +85,7 @@ internal class Product
     //---
     public void IncreaseSalePriceByPercent(int percent)
     {
-        SalePrice += (SalePrice*percent)/100;
+        SalePrice += (SalePrice * percent) / 100;
     }
     #endregion
 }

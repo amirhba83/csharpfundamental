@@ -1,13 +1,11 @@
 ﻿#nullable disable
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace ShopFirst;
 
 internal class Product
 {
     #region properties
-    private static int _nextId = 1;
+    internal static int _nextId = 1;
     public int ProductId { get; private set; }
     public string Name { get; private set; }
     public string Brand { get; private set; }
@@ -17,10 +15,10 @@ internal class Product
     #endregion
     //--------------------------------------------
     #region constructor
-    public Product (string name, string brand, decimal purchasePrice , decimal salePrice , int stockQuantity )
+    public Product(string name, string brand, decimal purchasePrice, decimal salePrice, int stockQuantity)
     {
 
-        if (IsValidData(name, brand , purchasePrice, salePrice, stockQuantity))
+        if (IsValidData(name, brand, purchasePrice, salePrice, stockQuantity))
         {
             Name = name;
             Brand = brand;
@@ -33,29 +31,43 @@ internal class Product
     #endregion
     //----
     #region methods
-    private bool IsValidData(string name, string brand, decimal purchasePrice, decimal salePrice, int stockQuantity)
+    private static bool IsValidData(
+    string name,
+    string brand,
+    decimal purchasePrice,
+    decimal salePrice,
+    int stockQuantity)
     {
-        if (string.IsNullOrWhiteSpace(name) ||
-            string.IsNullOrWhiteSpace(brand) ||
-            purchasePrice < 0 ||
-            salePrice < 0 ||
-            stockQuantity < 0)
-        {
-            return false;
-        }
-        else
-            return true;
-
+        return !string.IsNullOrWhiteSpace(name) &&
+               !string.IsNullOrWhiteSpace(brand) &&
+               purchasePrice >= 0 &&
+               salePrice >= 0 &&
+               stockQuantity >= 0;
     }
+    //private bool IsValidData(string name, string brand, decimal purchasePrice, decimal salePrice, int stockQuantity)
+    //{
+    //    if (string.IsNullOrWhiteSpace(name) ||
+    //        string.IsNullOrWhiteSpace(brand) ||
+    //        purchasePrice < 0 ||
+    //        salePrice < 0 ||
+    //        stockQuantity < 0)
+    //    {
+    //        return false;
+    //    }
+    //    else
+    //        return true;
+
+    //}
     //--
-    public bool IncreaseStockQuantity(int  quantity)
+    public bool IncreaseStockQuantity(int quantity)
     {
-        if (quantity > 0 )
+        if (quantity > 0)
         {
             StockQuantity = StockQuantity + quantity;
             return true;
-        }else 
-            { return false; }
+        }
+        else
+        { return false; }
     }
     //--
     public bool DecreaseStockQuantity(int quantity)
@@ -68,13 +80,25 @@ internal class Product
         else
         { return false; }
     }
-    //public void UpdateProductInfo(Product product)
-    //{
-    //    Name = product.Name;
-    //    Brand = product.Brand;
-    //    PurchasePrice = product.PurchasePrice;
-    //    SalePrice = product.SalePrice;
-    //    StockQuantity = product.StockQuantity;
-    //}
+    public void UpdateProductInfo(string name, string brand)
+    {
+        Name = name;
+        Brand = brand;
+    }
+    //--
+    public void UpdatePurchasePrice(decimal purchasePrice)
+    {
+        PurchasePrice = purchasePrice;
+    }
+    //--
+    public void UpdateSalePrice(decimal salePrice)
+    {
+        SalePrice = salePrice;
+    }
+    //---
+    public void IncreaseSalePriceByPercent(int percent)
+    {
+        SalePrice += (SalePrice * percent) / 100;
+    }
     #endregion
 }

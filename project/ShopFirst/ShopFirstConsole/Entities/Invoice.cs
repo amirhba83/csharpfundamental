@@ -35,11 +35,15 @@ internal class Invoice
     {
         Items.Add(item);
     }
+    public void RemoveItem(InvoiceItem item)
+    {
+        Items.Remove(item);
+    }
     public void ConfirmSale()
     {
-        if(Type == InvoiceType.Sale)
+        if (Type == InvoiceType.Sale)
         {
-            if (IsConfirmed == false)
+            if (!IsConfirmed)
             {
                 bool flag = true;
                 foreach (var item in Items)
@@ -69,15 +73,21 @@ internal class Invoice
                 return;
             }
         }
-       
+        else
+        {
+            Show.OutputMessage("not registerd pay attention to the invoice type and operation");
+            return;
+        }
+
     }
     //----
-    public void ConfirmPurchase ()
+    public void ConfirmPurchase()
     {
-        if (Type==InvoiceType.Purchase)
+        if (Type == InvoiceType.Purchase)
         {
-            if (IsConfirmed == false)
+            if (!IsConfirmed)
             {
+
                 foreach (var item in Items)
                 {
                     item.Product.IncreaseStockQuantity(item.Quantity);
@@ -90,12 +100,28 @@ internal class Invoice
                 Show.OutputMessage("this invoice was already confirmed please use edit menue to change");
                 return;
             }
-        }else
+        }
+        else
         {
             Show.OutputMessage("not registerd pay attention to the invoice type and operation");
             return;
         }
-        
+
+    }
+    private bool CheckAndCorrectStock()
+    {
+        bool stockIsEnough = true;
+
+        foreach (var item in Items)
+        {
+            if (item.Quantity > item.Product.StockQuantity)
+            {
+                stockIsEnough = false;
+                item.ChangeQuantity(item.Product.StockQuantity);
+            }
+        }
+
+        return stockIsEnough;
     }
 
 }
