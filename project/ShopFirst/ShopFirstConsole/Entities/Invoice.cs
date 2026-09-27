@@ -6,6 +6,7 @@ internal class Invoice
     public int InvoiceId { get; private set; }
     public DateTime Date { get; private set; }
     public List<InvoiceItem> Items { get; private set; }
+    // عملا چون پابلیک است از بیرون دسترسی های روی لیست قابل دسترسی است و خطرناک است و encapsulasion رعایت نشده .
     public Party Party { get; private set; }
     public InvoiceType Type { get; private set; }
     public bool IsConfirmed { get; private set; }
@@ -31,13 +32,25 @@ internal class Invoice
         Party = party;
         Items = new List<InvoiceItem>();
     }
-    public void AddItem(InvoiceItem item)
+    public bool AddItem(InvoiceItem item)
     {
-        Items.Add(item);
+        if (item != null && !IsConfirmed)
+        {
+            Items.Add(item);
+            return true;
+        }
+        else
+            return false;
     }
-    public void RemoveItem(InvoiceItem item)
+    public bool RemoveItem(InvoiceItem item)
     {
-        Items.Remove(item);
+        if (item != null && !IsConfirmed)
+        {
+            return Items.Remove(item);
+            // این متد در صورتی که آیتم وجود نداشته باشد false برمیگرداند و اگر آیتم وجود داشته باشد و حذف شود true برمیگرداند
+        }
+
+        return false;
     }
     public void ConfirmSale()
     {
@@ -45,21 +58,17 @@ internal class Invoice
         {
             if (!IsConfirmed)
             {
-                bool flag = true;
-                foreach (var item in Items)
+                if(CheckAndCorrectStockForSale())
                 {
-                    flag = flag && item.Quantity <= item.Product.StockQuantity;
-                    if (item.Quantity > item.Product.StockQuantity)
-                        item.ChangeQuantity(item.Product.StockQuantity);
-                }
-                if (flag)
-                {
-                    foreach (var item in Items)
+                    foreach(var item in Items)
                     {
                         item.Product.DecreaseStockQuantity(item.Quantity);
                     }
+
                     IsConfirmed = true;
-                    Show.OutputMessage("registerd suceesfully");
+
+                    Show.OutputMessage(
+                        "registered successfully");
                 }
                 else
                 {
@@ -81,6 +90,19 @@ internal class Invoice
 
     }
     //----
+    private bool CheckAndCorrectStockForSale()
+    {
+        bool stockIsEnough = true;
+        foreach (var item in Items)
+        {
+            if (item.Quantity > item.Product.StockQuantity)
+            {
+                stockIsEnough = false;
+                ChangeItemQuantity(item,item.Product.StockQuantity);
+            }
+        }
+        return stockIsEnough;
+    }
     public void ConfirmPurchase()
     {
         if (Type == InvoiceType.Purchase)
@@ -108,20 +130,18 @@ internal class Invoice
         }
 
     }
-    private bool CheckAndCorrectStock()
+    public bool ChangeItemQuantity(InvoiceItem item, int quantity)
     {
-        bool stockIsEnough = true;
+        if (item == null || IsConfirmed)
+            return false;
 
-        foreach (var item in Items)
-        {
-            if (item.Quantity > item.Product.StockQuantity)
-            {
-                stockIsEnough = false;
-                item.ChangeQuantity(item.Product.StockQuantity);
-            }
-        }
-
-        return stockIsEnough;
+        return item.ChangeQuantity(quantity);
     }
+    public bool ChangeItemUnitPrice(InvoiceItem item, decimal unitPrice)
+    {
+        if (item == null || IsConfirmed)
+            return false;
 
+        return item.ChangeUnitPrice(unitPrice);
+    }
 }

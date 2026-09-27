@@ -1,5 +1,7 @@
 ﻿#nullable disable
 
+using System.Linq.Expressions;
+
 namespace ShopFirstConsole;
 
 internal class Product
@@ -31,19 +33,15 @@ internal class Product
     #endregion
     //----
     #region methods
-    private bool IsValidData(string name, string brand, decimal purchasePrice, decimal salePrice, int stockQuantity)
+    public static bool IsValidData(string name, string brand, decimal purchasePrice, decimal salePrice, int stockQuantity)
     {
-        if (string.IsNullOrWhiteSpace(name) ||
-            string.IsNullOrWhiteSpace(brand) ||
-            purchasePrice < 0 ||
-            salePrice < 0 ||
-            stockQuantity < 0)
-        {
-            return false;
-        }
-        else
-            return true;
-
+        return !string.IsNullOrWhiteSpace(name) &&
+               !string.IsNullOrWhiteSpace(brand) &&
+               purchasePrice >= 0 &&
+               salePrice >= 0 &&
+               stockQuantity >= 0;
+        //چون متد به this و state شیء نیاز ندارد، static بودنش منطقی است.
+       // if/ elseای که فقط true / false برمی‌گرداند، می‌تواند مستقیماً به یک expression تبدیل شود.
     }
     //--
     public bool IncreaseStockQuantity(int quantity)

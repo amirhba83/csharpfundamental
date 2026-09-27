@@ -30,17 +30,28 @@ internal class InvoiceItem
         else
             return true;
     }
-    public void ChangeQuantity(int quantity)
+    public bool ChangeQuantity(int quantity)
     {
+        if (quantity < 1)
+            return false;
+
         Quantity = quantity;
+        return true;
     }
-    public void ChangeUnitPrice(decimal unitPrice)
+    public bool ChangeUnitPrice(decimal unitPrice)
     {
+        if (unitPrice < 0)
+            return false;
+
         UnitPrice = unitPrice;
-    }
-    public void EditInvoiceItemInfo(int quantity, decimal unitPrice)
-    {
-        ChangeQuantity(quantity);
-        ChangeUnitPrice(unitPrice);
-    }
+        return true;
+    }    //public bool EditInvoiceItemInfo(int quantity, decimal unitPrice)
+    //{
+    //    if (quantity < 1 || unitPrice < 0)
+    //        return false;
+
+    //    Quantity = quantity;
+    //    UnitPrice = unitPrice;
+    //    return true;
+    //}
 }
