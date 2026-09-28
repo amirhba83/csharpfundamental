@@ -16,7 +16,7 @@ internal class Program
         //Console.WriteLine(fileInfo.Name);
         //Console.WriteLine(fileInfo.Length);
         //Console.WriteLine(fileInfo.CreationTime);
-        
+
 
         //// converting object to json
         //List<Person> personList = new List<Person>
@@ -37,21 +37,31 @@ internal class Program
         //{
         //    Console.WriteLine(person.Name);
         //}
-        string path = @"C:\Users\laboo\Desktop\name.txt";
-        if (!File.Exists(path))
-        {
-            Console.WriteLine("file not found");
-            return;
-        }
-        using StreamReader streamReader = new StreamReader(path);
-        int count = 0;
-        while (!streamReader.EndOfStream)
-        {
-            string line = streamReader.ReadLine();
-            //Console.WriteLine(count+1 + "-" + line);
-            Console.WriteLine($"{count + 1}-{line}");
-            count++;
-        }
-        Console.WriteLine("total count is:"+count);
+        //    //--
+        //    string path = @"C:\Users\laboo\Desktop\name.txt";
+        //    if (!File.Exists(path))
+        //    {
+        //        Console.WriteLine("file not found");
+        //        return;
+        //    }
+        //    using StreamReader streamReader = new StreamReader(path);
+        //    int count = 0;
+        //    while (!streamReader.EndOfStream)
+        //    {
+        //        string line = streamReader.ReadLine();
+        //        //Console.WriteLine(count+1 + "-" + line);
+        //        Console.WriteLine($"{count + 1}-{line}");
+        //        count++;
+        //    }
+        //    Console.WriteLine("total count is:"+count);
+        string basedirectory = AppContext.BaseDirectory;
+        Console.WriteLine(Environment.CurrentDirectory);
+        Console.WriteLine(basedirectory);
+        Console.WriteLine(AppDomain.CurrentDomain.BaseDirectory);
+
+
+
+
+
     }
 }
